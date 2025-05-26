@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="164.04164mm"
+   height="164.04167mm"
+   viewBox="0 0 164.04164 164.04167"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="weird-dr.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="false"
+     inkscape:zoom="0.54938892"
+     inkscape:cx="557.89257"
+     inkscape:cy="667.10482"
+     inkscape:window-width="1464"
+     inkscape:window-height="846"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="7.5168015,90.841365"
+       orientation="1,0"
+       id="guide4"
+       inkscape:locked="false" />
+    <inkscape:page
+       x="-3.7012118e-14"
+       y="0"
+       width="164.04166"
+       height="164.04167"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient131"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#6d1e63;stop-opacity:1;"
+         offset="0"
+         id="stop131" />
+      <stop
+         style="stop-color:#1e246d;stop-opacity:0;"
+         offset="1"
+         id="stop132" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient131"
+       id="linearGradient134"
+       x1="106.95906"
+       y1="-17.232292"
+       x2="19.014944"
+       y2="212.13547"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-9.7826444,-8.7874637)" />
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter1124"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix1122" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix1123" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix1124" />
+    </filter>
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter1127"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix1125" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix1126" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix1127" />
+    </filter>
+    <filter
+       inkscape:label="Fluorescence"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Oversaturate colors which can be fluorescent in real world"
+       style="color-interpolation-filters:sRGB"
+       id="filter1130"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         id="feColorMatrix1128" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         id="feColorMatrix1129" />
+      <feColorMatrix
+         type="matrix"
+         values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+         id="feColorMatrix1130" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-19.508791,-59.237726)">
+    <g
+       id="g1155"
+       transform="matrix(1.0296425,0,0,0.91310685,-0.57828922,5.1473531)"
+       inkscape:export-filename="../projects/web/dorosplace/src/assets/favicon.svg"
+       inkscape:export-xdpi="53.023571"
+       inkscape:export-ydpi="53.023571">
+      <path
+         id="path4"
+         style="fill:#442168;fill-opacity:0.482353;fill-rule:nonzero;stroke:none;stroke-width:24.688;filter:url(#filter1124)"
+         d="m 134.77834,158.93138 c 0,19.22343 -50.846656,77.23555 -105.997668,79.80392 l 150.047168,-0.0749 c -43.13355,-76.36434 -44.0495,-78.98807 -44.0495,-79.72899 z"
+         sodipodi:nodetypes="scccs" />
+      <path
+         id="path3-4"
+         style="fill:url(#linearGradient134);fill-opacity:1;stroke:none;stroke-width:11.4992;filter:url(#filter1127)"
+         d="m 115.63997,59.297673 -84.979309,0.203088 a 113.33088,89.825222 0 0 1 104.803419,89.586259 113.33088,89.825222 0 0 1 -0.55293,8.83977 c 25.3073,-6.37582 43.6135,-24.86795 43.63144,-46.6943 0.0133,-27.11919 -27.64927,-51.934817 -62.47939,-51.934817 z" />
+      <path
+         id="path3-8"
+         style="fill:#4c3a5d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20.8502;filter:url(#filter1130)"
+         d="m 22.158461,59.237726 a 113.33088,89.825222 0 0 0 -2.649667,0.04868 l 8e-5,179.570834 a 113.33088,89.825222 0 0 0 2.652062,0.0327 A 113.33088,89.825222 0 0 0 135.46422,149.08699 113.33088,89.825222 0 0 0 22.161015,59.246505 Z" />
+    </g>
+  </g>
+</svg>

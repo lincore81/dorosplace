@@ -1,0 +1,56 @@
+<!DOCTYPE html><script>
+  const override = localStorage.getItem("isDark");
+  window.isDark = override
+    ? override === "true"
+    : override === undefined &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  document.documentElement.classList.toggle("dark", window.isDark);
+</script> <html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="/_astro/favicon.ZtCfkifF.svg"><title></title><link rel="stylesheet" href="/_astro/blog.Q-aR08Fy.css"></head> <body class="w-full h-full min-h-screen font-sans text-black dark:text-white
+        bg-gradient-to-br from-indigo-200 via-purple-300/60 to-indigo-700/50 
+        dark:from-pink-950 dark:via-none dark:to-indigo-950
+        duration-300 flex flex-col
+        [clip-path:inset(0px_0px_40px_0px)]
+        "> <script type="module">const s=window.matchMedia("(prefers-reduced-motion: reduce)").matches,d=window.innerWidth<768;let t=!1;if(!s&&!d){const e=document.getElementById("waves");if(e){const i=()=>{t||(t=!0,window.requestAnimationFrame(()=>{const o=window.matchMedia("(prefers-reduced-motion: reduce)").matches,r=window.innerWidth<768;if(o||r)return;const n=window.scrollY/40%2e3;e.setAttribute("viewBox",`0 ${n} 4000 4000`),e.setAttribute("stroke-dashoffset",`${n}`),t=!1}))};window.addEventListener("scroll",i),window.addEventListener("resize",i)}}</script> <svg id="waves" class="-z-80 fixed left-0 top-0 w-full h-full *:stroke-pink-800/40 *:dark:stroke-[rgba(205,147,54,0.5)] max-md:opacity-60" viewBox="0 0 4000 4000" preserveAspectRatio="xMidYMid slice"> <style>
+    @keyframes wave {
+      from {
+        stroke-dashoffset: 0;
+      }
+      to {
+        stroke-dashoffset: -24;
+      }
+    }
+    /* #wave {
+      animation: wave 4s linear infinite;
+    } */
+
+    /* Disable animation on mobile devices and when reduced motion is preferred */
+    @media (max-width: 768px), (prefers-reduced-motion: reduce) {
+      #wave {
+        animation: none;
+      }
+    }
+  </style> <defs> <path id="wave" fill="none" vector-effect="non-scaling-stroke" d="M -2000,0 
+         C -2000,0 -2000,80 -1666.68,80
+         C -1333.32,80 -1333.32,-80 -1000,-80
+         C -666.68,-80 -666.68,80 -333.32,80
+         C 0,80 0,-80 333.32,-80
+         C 666.68,-80 666.68,80 1000,80
+         C 1333.32,80 1333.32,-80 1666.68,-80
+         C 2000,-80 2000,80 2333.32,80
+         C 2666.68,80 2666.68,-80 3000,-80
+         C 3333.32,-80 3333.32,80 3666.68,80
+         C 4000,80 4000,-80 4333.32,-80
+         C 4666.68,-80 4666.68,80 5000,80
+         C 5333.32,80 5333.32,-80 5666.68,-80
+         C 6000,-80 6000,0 6000,0" stroke-dasharray="8 16"></path> </defs> <g transform="rotate(-15, 2000, 2000)"> <use href="#wave"></use> <use href="#wave" y="200"></use> <use href="#wave" y="400"></use> <use href="#wave" y="600"></use> <use href="#wave" y="800"></use> <use href="#wave" y="1000"></use> <use href="#wave" y="1200"></use> <use href="#wave" y="1400"></use> <use href="#wave" y="1600"></use> <use href="#wave" y="1800"></use> <use href="#wave" y="2000"></use> <use href="#wave" y="2200"></use> <use href="#wave" y="2400"></use> <use href="#wave" y="2600"></use> <use href="#wave" y="2800"></use> <use href="#wave" y="3000"></use> <use href="#wave" y="3200"></use> <use href="#wave" y="3400"></use> <use href="#wave" y="3600"></use> <use href="#wave" y="3800"></use> <use href="#wave" y="4000"></use> </g> </svg> <script type="module">const e=["bg-white/50","dark:bg-black/30","backdrop-blur-xl"],d=document.querySelector("header"),i=50;(window.innerWidth<768||window.scrollY>i)&&d?.classList.add(...e);const n=()=>{window.innerWidth<768||window.scrollY>i?d?.classList.add(...e):d?.classList.remove(...e)};window.addEventListener("scroll",n);window.addEventListener("resize",n);</script> <header class="fixed top-0 left-0 right-0 z-10
+  flex flex-row justify-between items-center px-4 py-1 transition-all duration-300"> <nav class="uppercase text-lg flex flex-row gap-4 px-2 md:p-4"> <img src="/_astro/logo.HBlIT4Mb.svg" alt="logo" class="w-6 h-6 dark:invert dark:-hue-rotate-[50deg]"> <a href="/" class="px-2 rounded-md hover:bg-pink-900/10 bg-gradient-to-br dark:from-pink-900 dark:to-pink-950 from-pink-300 to-purple-400">
+Home
+</a> <a href="/blog" class="px-2 rounded-md hover:bg-pink-900/10">Blog</a> </nav> <script type="module">window.toggleThemeEvent=new Event("toggleTheme");const m=document.getElementById("sun"),g=document.getElementById("moon");m?.classList.toggle("hidden",window.isDark);g?.classList.toggle("hidden",!window.isDark);window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",e=>{localStorage.getItem("isDark")||n(e.matches)});const l=document.querySelector("#theme-toggle-btn"),n=e=>{window.isDark=e,localStorage.setItem("isDark",""+e),document.documentElement.classList.toggle("dark",e);const t=document.querySelector("#theme-toggle-btn"),o=t?.dataset.lightTheme||"",d=t?.dataset.darkTheme||"";document.documentElement.setAttribute("data-theme",e?d:o);const s=document.getElementById("sun"),c=document.getElementById("moon");s?.classList.toggle("hidden",e),c?.classList.toggle("hidden",!e),window.dispatchEvent(window.toggleThemeEvent)},a=()=>{n(!window.isDark)};l?.addEventListener("click",a);</script> <button class="border p-2 border-pink-500/30 text-slate-700 dark:text-white rounded-lg hover:bg-pink-500/30 dark:hover:bg-pink-900/10 transition-colors" id="theme-toggle-btn" data-light-theme="github-light" data-dark-theme="laserwave"> <svg width="1em" height="1em" id="sun" class="hidden" data-icon="mage:sun">   <symbol id="ai:mage:sun" viewBox="0 0 24 24"><g fill="none"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" clip-path="url(#mageSun0)"><path d="M12 17.885a5.885 5.885 0 1 0 0-11.77a5.885 5.885 0 0 0 0 11.77m-9.281-5.879H1.5m21 0h-1.207m-9.287-9.287V1.5m0 21v-1.207M5.435 5.435l-.859-.859m14.848 14.848l-.86-.86m.001-13.129l.858-.859M4.576 19.424l.86-.86"/></g><defs><clipPath id="mageSun0"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></g></symbol><use href="#ai:mage:sun"></use>  </svg> <svg width="1em" height="1em" id="moon" class="hidden" data-icon="mage:moon">   <symbol id="ai:mage:moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.182 14.86A9.474 9.474 0 1 1 9.139 2.819a1.053 1.053 0 0 1 1.38 1.295a7.7 7.7 0 0 0-.085 4.642a7 7 0 0 0 4.81 4.811c1.52.45 3.14.42 4.643-.084a1.053 1.053 0 0 1 1.295 1.379"/></symbol><use href="#ai:mage:moon"></use>  </svg> </button> </header> <main class="pt-10 md:pt-20 grow">  <article class="md:mt-30
+    md:border border-white/70 dark:border-black/70
+    bg-white/70 dark:bg-black/70
+    md:rounded-xl mx-auto w-fit md:mb-[15vh]
+    [clip-path:inset(-20px_0_0_0_round_0.75rem)]"> <div class="flex flex-row gap-4"> <img src="/_astro/icke.Jv7Oyplg_1kybOa.webp" style alt="Hero" width="1024" height="1024" loading="lazy" decoding="async" class="max-w-40 grow-0 scale-125"> <section> <h1>dorosplace.de</h1> <h2>Hello, welcome to my website. Please come back later.</h2> </section> </div> </article>  </main> <footer class="flex flex-col justify-center items-center px-4 py-1 mb-4 z-10 relative text-sm gap-2"> <ul class="flex flex-row gap-2"> <a href="https://github.com/lincore81" target="_blank" class="text-sm opacity-50 hover:opacity-100 flex flex-row gap-1 items-center bg-black/10 dark:bg-white/10 rounded-full px-2 py-1 pointer-events-auto relative"> <svg width="1em" height="1em" data-icon="mage:github">   <symbol id="ai:mage:github" viewBox="0 0 24 24"><path fill="currentColor" d="M11.963 2.382C.554 2.621-1.82 17.93 8.852 21.602c.498.093.684-.219.684-.478v-1.68c-2.79.601-3.38-1.317-3.38-1.317a2.6 2.6 0 0 0-1.121-1.442c-.902-.612.072-.602.072-.602a2.07 2.07 0 0 1 1.536 1.038a2.167 2.167 0 0 0 2.924.819c.052-.5.275-.965.633-1.317c-2.23-.25-4.564-1.1-4.564-4.875a3.76 3.76 0 0 1 1.038-2.645a3.46 3.46 0 0 1 .103-2.634s.84-.26 2.76 1.037a9.6 9.6 0 0 1 5.02 0c1.908-1.276 2.748-1.038 2.748-1.038c.365.828.398 1.763.093 2.614a3.75 3.75 0 0 1 1.037 2.645c0 3.786-2.344 4.626-4.574 4.865c1.038.55.602 4.086.664 4.522c0 .259.176.57.695.477c10.642-3.64 8.152-18.97-3.257-19.209"/></symbol><use href="#ai:mage:github"></use>  </svg>lincore81
+</a> <a href="/legalese" class="text-sm opacity-50 hover:opacity-100 flex flex-row gap-1 items-center bg-black/10 dark:bg-white/10 rounded-full px-2 py-1 pointer-events-auto relative">Legal</a> </ul> <p class="opacity-50">
+©2025 Dominik Rosehnal
+</p> </footer> </body></html>
