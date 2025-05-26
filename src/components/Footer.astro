@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  class="flex flex-col justify-center items-center px-4 py-1 mb-4 z-10 relative text-sm gap-2"
+>
+  <ul class="flex flex-row gap-2">
+    <a
+      href="https://github.com/lincore81"
+      target="_blank"
+      class="text-sm opacity-50 hover:opacity-100 flex flex-row gap-1 items-center bg-black/10 dark:bg-white/10 rounded-full px-2 py-1 pointer-events-auto relative"
+    >
+      <Icon name="mage:github" />lincore81
+    </a>
+    <a
+      href="/legalese"
+      class="text-sm opacity-50 hover:opacity-100 flex flex-row gap-1 items-center bg-black/10 dark:bg-white/10 rounded-full px-2 py-1 pointer-events-auto relative"
+      >Legal</a
+    >
+  </ul>
+  <p class="opacity-50">
+    ©{new Date().getFullYear()} Dominik Rosehnal
+  </p>
+</footer>

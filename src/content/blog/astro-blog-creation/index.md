@@ -5,7 +5,7 @@ description: "
 Astro is a modern static site generator that enables developers to build fast, content-focused websites with ease. Its unique approach to rendering only the necessary JavaScript on the client makes it an excellent choice for blogs, documentation, and marketing sites. In this article, we'll walk through the process of creating a blog with Astro, covering everything from setup to deployment.
 "
 tags: ["astro", "blog", "tutorial"]
-hero: "./hero.webp"
+hero: "./hero.png"
 heroAlt: ""
 ---
 
@@ -64,6 +64,7 @@ Visit [http://localhost:4321](http://localhost:4321) to see your site in action.
 
 Astro projects have a simple, intuitive structure:
 
+```
 my-astro-blog/
 ├── public/
 ├── src/
@@ -73,6 +74,7 @@ my-astro-blog/
 │ └── content/
 ├── astro.config.mjs
 └── package.json
+```
 
 - **public/**: Static assets (images, fonts, etc.)
 - **src/pages/**: Route-based pages (e.g., `index.astro`, `about.astro`)
@@ -95,18 +97,18 @@ src/content/blog/hello-world.md
 
 Add the following content:
 
-````markdown
----
-title: "Hello World"
-pubDate: 2025-05-16
-description: "My first Astro blog post."
-author: "Jane Doe"
-tags: ["astro", "blog"]
----
+```markdown wrap ins={2-3} del={6}
+  ---
+  title: "Hello World"
+  pubDate: 2025-05-16
+  description: "My first Astro blog post."
+  author: "Jane Doe" // [!code ++]
+  tags: ["astro", "blog"]
+  ---
 
-# How to Use Astro to Create a Modern Blog
+  # How to Use Astro to Create a Modern Blog
 
-Astro is a modern static site builder that enables you to create fast, content-focused websites with ease. Its unique approach to web development—shipping zero JavaScript by default—makes it an excellent choice for building blogs that are both performant and easy to maintain. In this article, we'll walk through the process of creating a blog with Astro, covering everything from setup to deployment.
+  Astro is a modern static site builder that enables you to create fast, content-focused websites with ease. Its unique approach to web development—shipping zero JavaScript by default—makes it an excellent choice for building blogs that are both performant and easy to maintain. In this article, we'll walk through the process of creating a blog with Astro, covering everything from setup to deployment.
 ```
 
 ## Table of Contents
@@ -121,7 +123,8 @@ Astro is a modern static site builder that enables you to create fast, content-f
 8. [Conclusion](#conclusion)
 
 
-## Why Choose Astro?
+#
+# Why Choose Astro?
 
 Astro stands out among static site generators for several reasons:
 

@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import Prose from "@/components/Prose.astro";
+import { Icon } from "astro-icon/components";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -17,17 +18,35 @@ const { Content } = await render(post);
 ---
 
 <Layout>
-  {
-    hero && (
-      <Image
-        class="max-h-80 object-cover"
-        src={hero}
-        alt={post.data?.heroAlt ?? ""}
-      />
-    )
-  }
-  <h1>{post.data.title}</h1>
-  <Prose>
-    <Content />
-  </Prose>
+  <article
+    class="md:mt-30
+    md:border border-white/70 dark:border-black/70
+    bg-white/70 dark:bg-black/70
+    md:rounded-xl mx-auto w-fit overflow-clip md:mb-[15vh]"
+  >
+    {
+      post.data.hero && (
+        <Image
+          id="hero"
+          src={post.data.hero}
+          alt={post.data?.heroAlt ?? ""}
+          class="w-full h-90 md:h-100 max-h-[50vh] object-cover"
+        />
+      )
+    }
+    <div class="p-8 text-sm">
+      <div class="flex flex-row gap-4 items-center mb-4 opacity-50">
+        <p class="flex flex-row gap-1 items-center">
+          <Icon name="mage:calendar-2" class="-mt-[2px]" />
+          {post.data.pubDate.toISOString().slice(0, 10)}
+        </p>
+      </div>
+      <h1 class="text-3xl font-bold mb-8">
+        {post.data.title}
+      </h1>
+      <Prose>
+        <Content />
+      </Prose>
+    </div>
+  </article>
 </Layout>

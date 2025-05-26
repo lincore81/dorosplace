@@ -1,0 +1,106 @@
+---
+
+---
+
+<script>
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  const isMobile = window.innerWidth < 768;
+  let wait = false;
+  if (!prefersReducedMotion && !isMobile) {
+    const waves = document.getElementById("waves") as SVGSVGElement | null;
+    if (waves) {
+      const onScroll = () => {
+        if (wait) return;
+        wait = true;
+        window.requestAnimationFrame(() => {
+          const prefersReducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches;
+          const isMobile = window.innerWidth < 768;
+          if (prefersReducedMotion || isMobile) {
+            return;
+          }
+          const y = (window.scrollY / 40) % 2000;
+          waves.setAttribute("viewBox", `0 ${y} 4000 4000`);
+          waves.setAttribute("stroke-dashoffset", `${y}`);
+          wait = false;
+        });
+      };
+      window.addEventListener("scroll", onScroll);
+      window.addEventListener("resize", onScroll);
+    }
+  }
+</script>
+<svg
+  id="waves"
+  class="-z-80 fixed left-0 top-0 w-full h-full *:stroke-pink-800/40 *:dark:stroke-[rgba(205,147,54,0.5)] max-md:opacity-60"
+  viewBox="0 0 4000 4000"
+  preserveAspectRatio="xMidYMid slice"
+>
+  <style>
+    @keyframes wave {
+      from {
+        stroke-dashoffset: 0;
+      }
+      to {
+        stroke-dashoffset: -24;
+      }
+    }
+    /* #wave {
+      animation: wave 4s linear infinite;
+    } */
+
+    /* Disable animation on mobile devices and when reduced motion is preferred */
+    @media (max-width: 768px), (prefers-reduced-motion: reduce) {
+      #wave {
+        animation: none;
+      }
+    }
+  </style>
+  <defs>
+    <path
+      id="wave"
+      fill="none"
+      vector-effect="non-scaling-stroke"
+      d="M -2000,0 
+         C -2000,0 -2000,80 -1666.68,80
+         C -1333.32,80 -1333.32,-80 -1000,-80
+         C -666.68,-80 -666.68,80 -333.32,80
+         C 0,80 0,-80 333.32,-80
+         C 666.68,-80 666.68,80 1000,80
+         C 1333.32,80 1333.32,-80 1666.68,-80
+         C 2000,-80 2000,80 2333.32,80
+         C 2666.68,80 2666.68,-80 3000,-80
+         C 3333.32,-80 3333.32,80 3666.68,80
+         C 4000,80 4000,-80 4333.32,-80
+         C 4666.68,-80 4666.68,80 5000,80
+         C 5333.32,80 5333.32,-80 5666.68,-80
+         C 6000,-80 6000,0 6000,0"
+      stroke-dasharray="8 16"></path>
+  </defs>
+  <g transform="rotate(-15, 2000, 2000)">
+    <use href="#wave"></use>
+    <use href="#wave" y="200"></use>
+    <use href="#wave" y="400"></use>
+    <use href="#wave" y="600"></use>
+    <use href="#wave" y="800"></use>
+    <use href="#wave" y="1000"></use>
+    <use href="#wave" y="1200"></use>
+    <use href="#wave" y="1400"></use>
+    <use href="#wave" y="1600"></use>
+    <use href="#wave" y="1800"></use>
+    <use href="#wave" y="2000"></use>
+    <use href="#wave" y="2200"></use>
+    <use href="#wave" y="2400"></use>
+    <use href="#wave" y="2600"></use>
+    <use href="#wave" y="2800"></use>
+    <use href="#wave" y="3000"></use>
+    <use href="#wave" y="3200"></use>
+    <use href="#wave" y="3400"></use>
+    <use href="#wave" y="3600"></use>
+    <use href="#wave" y="3800"></use>
+    <use href="#wave" y="4000"></use>
+  </g>
+</svg>

@@ -1,29 +1,42 @@
 ---
 import "../styles/global.css";
-
-const { title } = Astro.props;
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import WaveBackground from "@/components/WaveBackground.astro";
+import favicon from "@/assets/favicon.svg";
+const { title } = Astro.props ?? "dorosplace";
 ---
 
-<!doctype html>
+<script is:inline>
+  const override = localStorage.getItem("isDark");
+  window.isDark = override
+    ? override === "true"
+    : override === undefined &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  document.documentElement.classList.toggle("dark", window.isDark);
+</script>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href={favicon.src} />
     <title>{title}</title>
   </head>
   <body
-    class="font-sans bg-gradient-to-br from-purple-200 to-blue-200 h-screen m-8"
+    class={`w-full h-full min-h-screen font-sans text-black dark:text-white
+        bg-gradient-to-br from-indigo-200 via-purple-300/60 to-indigo-700/50 
+        dark:from-pink-950 dark:via-none dark:to-indigo-950
+        duration-300 flex flex-col
+        [clip-path:inset(0px_0px_40px_0px)]
+        `}
   >
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-      </nav>
-    </header>
-    <main>
+    <WaveBackground />
+    <Header />
+    <main class="pt-10 md:pt-20 grow">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

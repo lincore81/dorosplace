@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon/components";
+import config from "../../astro.config.mjs";
+const lightTheme = config.markdown?.shikiConfig?.themes?.light;
+const darkTheme = config.markdown?.shikiConfig?.themes?.dark;
+---
+
+<script>
+  declare global {
+    interface Window {
+      isDark: boolean;
+      toggleThemeEvent: Event;
+    }
+  }
+  window.toggleThemeEvent = new Event("toggleTheme");
+  const sun = document.getElementById("sun");
+  const moon = document.getElementById("moon");
+  sun?.classList.toggle("hidden", window.isDark);
+  moon?.classList.toggle("hidden", !window.isDark);
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!localStorage.getItem("isDark")) setTheme(e.matches);
+    });
+  const button = document.querySelector("#theme-toggle-btn");
+  const setTheme = (isDark: boolean) => {
+    window.isDark = isDark;
+    localStorage.setItem("isDark", "" + isDark);
+    document.documentElement.classList.toggle("dark", isDark);
+    const button = document.querySelector("#theme-toggle-btn") as HTMLElement;
+    const lightTheme = button?.dataset.lightTheme || "";
+    const darkTheme = button?.dataset.darkTheme || "";
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? darkTheme : lightTheme
+    );
+    const sun = document.getElementById("sun");
+    const moon = document.getElementById("moon");
+    sun?.classList.toggle("hidden", isDark);
+    moon?.classList.toggle("hidden", !isDark);
+    window.dispatchEvent(window.toggleThemeEvent);
+  };
+  const toggleTheme = () => {
+    setTheme(!window.isDark);
+  };
+  button?.addEventListener("click", toggleTheme);
+</script>
+
+<button
+  class="border p-2 border-pink-500/30 text-slate-700 dark:text-white rounded-lg hover:bg-pink-500/30 dark:hover:bg-pink-900/10 transition-colors"
+  id="theme-toggle-btn"
+  data-light-theme={lightTheme}
+  data-dark-theme={darkTheme}
+>
+  <Icon name="mage:sun" id="sun" class="hidden" />
+  <Icon name="mage:moon" id="moon" class="hidden" />
+</button>

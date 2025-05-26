@@ -1,11 +1,22 @@
 ---
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-
+import Icke from "../components/Icke.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Welcome />
+  <article
+    class="md:mt-30
+    md:border border-white/70 dark:border-black/70
+    bg-white/70 dark:bg-black/70
+    md:rounded-xl mx-auto w-fit md:mb-[15vh]
+    [clip-path:inset(-20px_0_0_0_round_0.75rem)]"
+  >
+    <div class="flex flex-row gap-4">
+      <Icke />
+      <Welcome />
+    </div>
+  </article>
 </Layout>
